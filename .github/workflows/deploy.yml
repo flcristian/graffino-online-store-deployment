@@ -37,7 +37,7 @@ jobs:
             podman container rm $CONTAINERS || true; \
             fi; \
             echo 'Starting new containers...'; \
-            podman-compose up -d; \
+            podman compose up -d; \
             echo 'Deployment completed successfully.'"
         env:
             EC2_SSH_PRIVATE_KEY: ${{ secrets.EC2_SSH_PRIVATE_KEY }}
