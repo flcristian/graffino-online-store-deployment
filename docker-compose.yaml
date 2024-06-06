@@ -20,7 +20,7 @@ services:
     volumes:
       - db_data:/var/lib/mysql 
   webapp:
-    image: florescucristian/graffino-online-store-api:05.06.2024.19.15.26
+    image: florescucristian/graffino-online-store-api:v12
     networks:
       - mynetwork
     ports:
@@ -32,7 +32,7 @@ services:
       - mysql
     restart: unless-stopped
   clientapp:
-    image: florescucristian/graffino-online-store-client:06.06.2024.10.34.47
+    image: florescucristian/graffino-online-store-client:v18
     networks:
       - mynetwork
     ports:
@@ -40,7 +40,7 @@ services:
     depends_on:
       - webapp
   nginx:
-    image: florescucristian/graffino-online-store-proxy-service:v1
+    image: florescucristian/graffino-online-store-proxy-service:v2
     networks:
       - mynetwork
     ports:
