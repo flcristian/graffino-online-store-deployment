@@ -32,7 +32,7 @@ services:
       - mysql
     restart: unless-stopped
   clientapp:
-    image: florescucristian/graffino-online-store-client:06.06.2024.11.26.40
+    image: florescucristian/graffino-online-store-client:06.06.2024.11.42.24
     networks:
       - mynetwork
     ports:
