@@ -20,7 +20,7 @@ services:
     volumes:
       - db_data:/var/lib/mysql 
   webapp:
-    image: florescucristian/graffino-online-store-api:v12
+    image: florescucristian/graffino-online-store-api:06.06.2024.11.35.23
     networks:
       - mynetwork
     ports:
